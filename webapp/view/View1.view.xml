@@ -1,0 +1,62 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="docusign_ui5.docusign_ui5.controller.View1" displayBlock="true">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="UI5 Application - DocuSign">
+					<content>
+					    <IconTabBar selectedKey="__filter1" id="bar0">
+					        <items>
+					            <IconTabFilter text="Form" icon="sap-icon://task" iconColor="Critical" id="filter1">
+					            	<content>
+								        <sap.ui.layout.form:Form xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" id="form0">
+								            <sap.ui.layout.form:formContainers><sap.ui.layout.form:FormContainer title="Ingresa tus datos" id="container0">
+								                    <sap.ui.layout.form:formElements>
+								                        <sap.ui.layout.form:FormElement label="First Name" id="element0">
+								                            <sap.ui.layout.form:fields>
+								                                <Input width="100%" id="input0" value="{/firstName}" placeholder="Ingresa tu nombre"/>
+								                            </sap.ui.layout.form:fields>
+								                        </sap.ui.layout.form:FormElement>
+								                        <sap.ui.layout.form:FormElement label="Last Name" id="element2">
+								                            <sap.ui.layout.form:fields>
+								                                <Input width="100%" id="input2" value="{/lastName}" placeholder="Ingresa tu apellido"/>
+								                            </sap.ui.layout.form:fields>
+								                        </sap.ui.layout.form:FormElement>
+								                        <sap.ui.layout.form:FormElement label="Phone Number" id="element1">
+								                            <sap.ui.layout.form:fields>
+								                                <Input width="100%" id="input1" value="{phoneNo}" placeholder="Ingresa tu telefono"/>
+								                            </sap.ui.layout.form:fields>
+								                        </sap.ui.layout.form:FormElement>
+								                        <sap.ui.layout.form:FormElement label="Email" id="element3">
+								                            <sap.ui.layout.form:fields>
+								                                <Input width="100%" id="input3" value="{email}" placeholder="Ingresa tu correo"/>
+								                            </sap.ui.layout.form:fields>
+								                        </sap.ui.layout.form:FormElement>
+								                    </sap.ui.layout.form:formElements>
+								                </sap.ui.layout.form:FormContainer>
+								            </sap.ui.layout.form:formContainers>
+								            <sap.ui.layout.form:layout>
+								                <sap.ui.layout.form:ResponsiveGridLayout id="layout0"/>
+								            </sap.ui.layout.form:layout></sap.ui.layout.form:Form>
+					            	</content>
+					            </IconTabFilter>
+					            <IconTabFilter text="DocuSign" icon="sap-icon://shipping-status" iconColor="Positive" id="filter2"/></items>
+					    <content>
+
+					    <HBox width="100%" id="hbox0">
+
+					        <items>
+
+					            <Button xmlns="sap.m" text="Generar forma" id="button0" press="_pressButton"/>
+
+					        </items>
+
+					    </HBox>
+
+					    </content>
+					    </IconTabBar>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
