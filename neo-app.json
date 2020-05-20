@@ -44,6 +44,14 @@
         "name": "DOCUSIGN_DEMO"
       },
       "description": "DOCUSIGN_DEMO"
+    },
+      {
+      "path": "/docusign_api",
+      "target": {
+        "type": "destination",
+        "name": "docusign_api"
+      },
+      "description": "docusign_api"
     }
   ],
   "sendWelcomeFileRedirect": true

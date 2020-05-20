@@ -12,6 +12,16 @@
 		"sourceTemplate": {
 			"id": "ui5template.basicSAPUI5ApplicationProject",
 			"version": "1.40.12"
+		},
+		"dataSources": {
+			"docusign": {
+				"uri": "/docusign/elements/api-v2",
+				"type": "JSON"
+			},
+			"docusign_api": {
+				"uri": "docusign_api/restapi/v2",
+				"type": "JSON"
+			}
 		}
 	},
 
