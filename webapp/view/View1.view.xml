@@ -46,7 +46,7 @@
 									<content>
 										<HBox width="100%" id="hbox0">
 											<items>
-												<Button xmlns="sap.m" text="Generar forma" id="button0" press="sendForm"/>
+												<Button xmlns="sap.m" text="Generar forma" id="button0" press="_pressButton"/>
 											</items>
 										</HBox>
 										<HBox width="100%" id="docusign_container" justifyContent="Center"/>

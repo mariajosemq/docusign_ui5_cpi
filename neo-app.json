@@ -45,6 +45,14 @@
       },
       "description": "DOCUSIGN_DEMO"
     },
+    {
+      "path": "/docusign_api_py",
+      "target": {
+        "type": "destination",
+        "name": "docusign_api_py"
+      },
+      "description": "docusign_api_py"
+    },
       {
       "path": "/docusign_api",
       "target": {

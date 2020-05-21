@@ -12,68 +12,51 @@ sap.ui.define([
 			console.log(oModel.firstName);
 
 			var templateData = {
-							"emailSubject": "DocuSign API DEMO",
-							"emailBlurb": "Sample Template",
-							"status": "sent",
-							"compositeTemplates": [{
-								"serverTemplates": [{
-									"sequence": "1",
-									"templateId": "b02716e3-d2ca-47f6-adca-c3dfa46c87bf"
-								}],
-								"inlineTemplates": [{
-									"sequence": "1",
-									"recipients": {
-										"signers": [{
-											"email": oModel.email,
-											"name": oModel.firstName,
-											"recipientId": "1",
-											"routingOrder": "1",
-											"roleName": "Signer",
-											"clientUserId": "12345678",
-											"tabs": {
-												"textTabs": [{
-													"tabLabel": "firstName",
-													"value": oModel.firstName
-												}, {
-													"tabLabel": "lastName",
-													"value": oModel.lastName
-												}, {
-													"tabLabel": "phoneNo",
-													"value": oModel.phoneNo
-												}, {
-													"tabLabel": "email",
-													"value": oModel.email
-												}]
-			
-											}
-										}]
-									}
-								}]
-							}]
-						};
+						"templateData": {
+							"templateId": "b02716e3-d2ca-47f6-adca-c3dfa46c87bf",
+							"email": oModel.email,
+							"fullName": "Mariajose Martinez",
+							"firstName": oModel.firstName,
+							"lastName": oModel.lastName,
+							"phoneNo": oModel.phoneNo
+						}
+			};	
 						
 			var settings = {
-				"async": true,
-				"crossDomain": true,
-				"url": "/docusign/envelopes",
+				"url": "/docusign_api_py/envelopes",
 				"method": "POST",
 				"data": JSON.stringify(templateData),
 				"headers": {
-					"Authorization": "User XYjt+foObG50viSimqsfUXR5qiP4rHiwXQ42lKMcuuI=, Organization 2bb821f388f5511aa859a01dcc4472bf, Element 3n5Btff3vgVkAwZrRHvqTMYYOe9Cm94TRaCIUpqEGAQ=",
-					"Content-Type": "multipart/form-data"
+					"Content-Type": "application/json"
 				}
 			};
 			
-			// var deferred = $.Deferred();
+			var docusignContainerId = this.getView().byId("docusign_container");
+			
 			$.ajax(settings).done(function (response) { 
+				response = JSON.parse(response); 
 				console.log(response);
+				
+				if(document.querySelector("#docusign") === null){
+				var html = new sap.ui.core.HTML({
+					    // content: "<iframe width='100%' height='1500px' id='docusign'></iframe>",
+					    content: "<iframe width='1200px' height='1000px' id='docusign'></iframe>",
+						afterRendering: function () {
+						var div = document.querySelector("#docusign");
+						   div.src = response.url.replace(/.*t=/,'https://demo.docusign.net/Signing/StartInSession.aspx?t='); //ese src es del iframe y el response es el que trae la URL
+					    }
+					});
+					docusignContainerId.addItem(html);
+				}else{
+					 var div = document.querySelector("#docusign");
+					 div.src = response.url.replace(/.*t=/,'https://demo.docusign.net/Signing/StartInSession.aspx?t=');
+				}
+				
 				// deferred.resolve(response);
 			}.bind(this)).fail(function (error) {
 				console.log(error);
 				// deferred.reject(error);
 			}.bind(this));
-
-			
 
 		},
 
@@ -169,7 +152,7 @@ sap.ui.define([
 			                firstName: "Juan",
 			                lastName: "Rivas",
 			                phoneNo: "554678950",
-			                email: "juan@rivas.com"
+			                email: "mariajose.martinez@sap.com"
 			              };
 			             
 			var oModel = new JSONModel();

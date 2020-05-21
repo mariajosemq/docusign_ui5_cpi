@@ -21,6 +21,10 @@
 			"docusign_api": {
 				"uri": "docusign_api/restapi/v2",
 				"type": "JSON"
+			},
+			"docusign_api_py": {
+				"uri": "docusign_api_py/envelopes",
+				"type": "JSON"
 			}
 		}
 	},
