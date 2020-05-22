@@ -21,22 +21,22 @@
 													<sap.ui.layout.form:formElements>
 														<sap.ui.layout.form:FormElement label="Nombre completo" id="element0">
 															<sap.ui.layout.form:fields>
-																<Input width="100%" id="input0" value="{/employeeFullName}" placeholder="Ingresa tu nombre completo" required="true"/>
+																<Input width="100%" id="input0" value="{/employeeFullName}" blocked="true" required="true"/>
 															</sap.ui.layout.form:fields>
 														</sap.ui.layout.form:FormElement>
 														<sap.ui.layout.form:FormElement label="CURP" id="element2">
 															<sap.ui.layout.form:fields>
-																<Input width="100%" id="input2" value="{/CURP}" placeholder="Ingresa tu CURP" required="true" blocked="true" maxLength="13"/>
+																<Input width="100%" id="input2" value="{/CURP}" required="true" blocked="true" maxLength="13"/>
 															</sap.ui.layout.form:fields>
 														</sap.ui.layout.form:FormElement>
 														<sap.ui.layout.form:FormElement label="Ocupación" id="element1">
 															<sap.ui.layout.form:fields>
-																<Input width="100%" id="input1" value="{/occupation}" placeholder="Ingresa tu ocupación" required="true"/>
+																<Input width="100%" id="input1" value="{/occupation}" blocked="true" required="true"/>
 															</sap.ui.layout.form:fields>
 														</sap.ui.layout.form:FormElement>
 														<sap.ui.layout.form:FormElement label="Puesto" id="element0_1590106134146">
 															<sap.ui.layout.form:fields>
-																<Input width="100%" id="input0_1590106134146" value="{/job}" placeholder="Ingresa tu puesto" required="true"/>
+																<Input width="100%" id="input0_1590106134146" value="{/job}" blocked="true" required="true"/>
 															</sap.ui.layout.form:fields>
 														</sap.ui.layout.form:FormElement>
 													</sap.ui.layout.form:formElements>
@@ -45,7 +45,7 @@
 													<sap.ui.layout.form:formElements>
 														<sap.ui.layout.form:FormElement label="Razón social" id="element3_1590106438972">
 															<sap.ui.layout.form:fields>
-																<Input width="100%" id="input3_1590106438972" value="{/companyName}" required="true"/>
+																<Input width="100%" id="input3_1590106438972" value="{/companyName}" blocked="true" required="true"/>
 															</sap.ui.layout.form:fields>
 														</sap.ui.layout.form:FormElement>
 														<sap.ui.layout.form:FormElement label="RFC de la empresa" id="element5">
@@ -59,17 +59,17 @@
 													<sap.ui.layout.form:formElements>
 														<sap.ui.layout.form:FormElement label="Nombre del curso" id="element1_1590106707500">
 															<sap.ui.layout.form:fields>
-																<Input width="100%" id="input1_1590106707499" value="{/courseName}" required="true"/>
+																<Input width="100%" id="input1_1590106707499" value="{/courseName}" placeholder="Ingresa el nombre del curso" required="true"/>
 															</sap.ui.layout.form:fields>
 														</sap.ui.layout.form:FormElement>
 														<sap.ui.layout.form:FormElement label="Duración en horas" id="element5_1590106820499">
 															<sap.ui.layout.form:fields>
-																<Input width="100%" id="input5_1590106820499" value="{/hourDuration}" required="true"/>
+																<Input width="100%" id="input5_1590106820499" value="{/hourDuration}" required="true" placeholder="Ingresa la duración del curso"/>
 															</sap.ui.layout.form:fields>
 														</sap.ui.layout.form:FormElement>
 														<sap.ui.layout.form:FormElement label="Área temática del curso" id="element4">
 															<sap.ui.layout.form:fields>
-																<Input width="100%" id="input4" value="{/courseArea}" required="true"/>
+																<Input width="100%" id="input4" value="{/courseArea}" placeholder="Ingresa el área temática del curso" required="true"/>
 															</sap.ui.layout.form:fields>
 														</sap.ui.layout.form:FormElement>
 														<sap.ui.layout.form:FormElement label="Nombre del instructor" id="element7">
@@ -84,12 +84,12 @@
 														</sap.ui.layout.form:FormElement>
 														<sap.ui.layout.form:FormElement label="Período de ejecución. Desde" id="element6">
 															<sap.ui.layout.form:fields>
-																<DatePicker xmlns="sap.m" id="picker1" value="{/date}" valueFormat="MM/dd/yy" required="true"/>
+																<DatePicker xmlns="sap.m" id="picker1" value="{/date}" valueFormat="MM/dd/yy" required="true" placeholder="Ingresa la fecha de inicio del curso"/>
 															</sap.ui.layout.form:fields>
 														</sap.ui.layout.form:FormElement>
 														<sap.ui.layout.form:FormElement label="Hasta" id="element3_1590106814379">
 															<sap.ui.layout.form:fields>
-																<DatePicker xmlns:mvc="sap.ui.core.mvc" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns="sap.m" id="picker1_copy" value="{/date2}" valueFormat="MM/dd/yy" required="true"/>
+																<DatePicker xmlns:mvc="sap.ui.core.mvc" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns="sap.m" id="picker1_copy" value="{/date2}" valueFormat="MM/dd/yy" required="true" placeholder="Ingresa la fecha de fin del curso"/>
 															</sap.ui.layout.form:fields>
 														</sap.ui.layout.form:FormElement>
 													</sap.ui.layout.form:formElements>

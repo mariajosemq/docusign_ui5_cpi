@@ -29,7 +29,7 @@ sap.ui.define([
 			var templateData = {
 			   "templateData": {
 			      "emailAccount": "mariajose.martinez@sap.com",
-			      "password": "<password>",
+			      "password": "Mex18341341",
 			      "integratorKey": "76617885-1c36-4a5e-98b2-f74cdf5a736b",
 			      "accountId": "10543448",
 			      "templateId": "b4f59517-fc5d-4cd5-9332-1f2c13dc30ca",
@@ -133,16 +133,16 @@ sap.ui.define([
 
 		onInit: function () {
 			 var dataObject = {
-			// 		    	employeeFullName: "Mariajose Martinez",
-			// 		    	occupation: "Ingeniero",
-			// 		    	job: "Ingeniero de Preventas",
-    						CURP: "GAJH900211MNER010",
+			 		    	employeeFullName: "Rosendo Perez",
+			 		    	occupation: "Licenciado en Informática",
+			 		    	job: "Gerente de Preventas",
+    						CURP: "PERX850211MNER010",
     						companyName: "SAP Mexico SA de CV",
-        					courseName: "Seguridad y Salud en el Trabajo",
-    						hourDuration: "40 horas",
-            				courseArea: "Seguridad y Salud en el Trabajo",
-    						agentName: "Luisa Melendez",
-    						instructorName: "Javier Garcia",
+        //					courseName: "Seguridad y Salud",
+    	//					hourDuration: "40 horas",
+        //    				courseArea: "Seguridad e Higiene Ambiental",
+    						agentName: "Javier Garcia",
+    						instructorName: "Mariajose Martinez",
     						RFC: "SME940408510"
 	       };
 			
