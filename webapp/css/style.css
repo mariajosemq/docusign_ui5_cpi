@@ -1,1 +1,8 @@
 /* Enter your custom styles here */
+#container-docusign_ui5---View1--docusign_container div:first-child {
+   width:100%;
+}
+
+#application-docusign_ui5-Display-component---View1--docusign_container div:first-child {
+   width:100%;
+}

@@ -2,15 +2,6 @@
   "welcomeFile": "/webapp/index.html",
   "routes": [
     {
-      "path": "/resources",
-      "target": {
-        "type": "service",
-        "name": "sapui5",
-        "entryPath": "/resources"
-      },
-      "description": "SAPUI5 Resources"
-    },
-    {
       "path": "/test-resources",
       "target": {
         "type": "service",
@@ -20,10 +11,12 @@
       "description": "SAPUI5 Resources"
     },
     {
-      "path": "/webapp/resources",
+      "path": "/resources",
       "target": {
         "type": "service",
         "name": "sapui5",
+        "version": "1.71.3",
+        "preferLocal": true,
         "entryPath": "/resources"
       },
       "description": "SAPUI5 Resources"

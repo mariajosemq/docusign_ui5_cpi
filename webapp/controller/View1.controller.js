@@ -28,11 +28,11 @@ sap.ui.define([
 
 			var templateData = {
 			   "templateData": {
-			      "emailAccount": "mariajose.martinez@sap.com",
-			      "password": "<password>",
-			      "integratorKey": "76617885-1c36-4a5e-98b2-f74cdf5a736b",
-			      "accountId": "10543448",
-			      "templateId": "b4f59517-fc5d-4cd5-9332-1f2c13dc30ca",
+			      "emailAccount": "<DocuSign Email>",
+			      "password": "<DocuSign Password>",
+			      "integratorKey": "<DocuSign Integration Key>",
+			      "accountId": "<DocuSign Account ID>",
+			      "templateId": "DocuSign Template ID",
 			      "employeeFullName": oModel.employeeFullName,
 			      "occupation": oModel.occupation,
 			      "job": oModel.job,
