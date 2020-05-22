@@ -2,34 +2,94 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page id="page" title="UI5 Application - DocuSign">
+				<Page id="page" showHeader="true" title="UI5 Application - DocuSign">
 					<content>
 						<IconTabBar selectedKey="__filter1" id="bar0">
 							<items>
-								<IconTabFilter text="Form" icon="sap-icon://task" iconColor="Critical" id="filter1">
+								<IconTabFilter text="Form" icon="sap-icon://form" iconColor="Critical" id="filter1">
 									<content>
+										<VBox width="100%" direction="Column" id="vbox0" justifyContent="Center" alignItems="Center">
+											<items>
+
+											<Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/1200px-SAP_2011_logo.svg.png" width="110px" height="60px" id="image0"/>
+
+											</items>
+										</VBox>
 										<sap.ui.layout.form:Form xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" id="form0">
 											<sap.ui.layout.form:formContainers>
-												<sap.ui.layout.form:FormContainer title="Ingresa tus datos" id="container0">
+												<sap.ui.layout.form:FormContainer title="Datos del trabajador" id="container0">
 													<sap.ui.layout.form:formElements>
-														<sap.ui.layout.form:FormElement label="First Name" id="element0">
+														<sap.ui.layout.form:FormElement label="Nombre completo" id="element0">
 															<sap.ui.layout.form:fields>
-																<Input width="100%" id="input0" value="{/firstName}" placeholder="Ingresa tu nombre"/>
+																<Input width="100%" id="input0" value="{/employeeFullName}" placeholder="Ingresa tu nombre completo" required="true"/>
 															</sap.ui.layout.form:fields>
 														</sap.ui.layout.form:FormElement>
-														<sap.ui.layout.form:FormElement label="Last Name" id="element2">
+														<sap.ui.layout.form:FormElement label="CURP" id="element2">
 															<sap.ui.layout.form:fields>
-																<Input width="100%" id="input2" value="{/lastName}" placeholder="Ingresa tu apellido"/>
+																<Input width="100%" id="input2" value="{/CURP}" placeholder="Ingresa tu CURP" required="true" blocked="true" maxLength="13"/>
 															</sap.ui.layout.form:fields>
 														</sap.ui.layout.form:FormElement>
-														<sap.ui.layout.form:FormElement label="Phone Number" id="element1">
+														<sap.ui.layout.form:FormElement label="Ocupación" id="element1">
 															<sap.ui.layout.form:fields>
-																<Input width="100%" id="input1" value="{/phoneNo}" placeholder="Ingresa tu telefono"/>
+																<Input width="100%" id="input1" value="{/occupation}" placeholder="Ingresa tu ocupación" required="true"/>
 															</sap.ui.layout.form:fields>
 														</sap.ui.layout.form:FormElement>
-														<sap.ui.layout.form:FormElement label="Email" id="element3">
+														<sap.ui.layout.form:FormElement label="Puesto" id="element0_1590106134146">
 															<sap.ui.layout.form:fields>
-																<Input width="100%" id="input3" value="{/email}" placeholder="Ingresa tu correo"/>
+																<Input width="100%" id="input0_1590106134146" value="{/job}" placeholder="Ingresa tu puesto" required="true"/>
+															</sap.ui.layout.form:fields>
+														</sap.ui.layout.form:FormElement>
+													</sap.ui.layout.form:formElements>
+												</sap.ui.layout.form:FormContainer>
+												<sap.ui.layout.form:FormContainer title="Datos de la empresa" id="container0_1590106599314">
+													<sap.ui.layout.form:formElements>
+														<sap.ui.layout.form:FormElement label="Razón social" id="element3_1590106438972">
+															<sap.ui.layout.form:fields>
+																<Input width="100%" id="input3_1590106438972" value="{/companyName}" required="true"/>
+															</sap.ui.layout.form:fields>
+														</sap.ui.layout.form:FormElement>
+														<sap.ui.layout.form:FormElement label="RFC de la empresa" id="element5">
+															<sap.ui.layout.form:fields>
+																<Input width="100%" id="input5" value="{/RFC}" required="true" blocked="true"/>
+															</sap.ui.layout.form:fields>
+														</sap.ui.layout.form:FormElement>
+													</sap.ui.layout.form:formElements>
+												</sap.ui.layout.form:FormContainer>
+												<sap.ui.layout.form:FormContainer title="Datos del programa de capacitación" id="container1">
+													<sap.ui.layout.form:formElements>
+														<sap.ui.layout.form:FormElement label="Nombre del curso" id="element1_1590106707500">
+															<sap.ui.layout.form:fields>
+																<Input width="100%" id="input1_1590106707499" value="{/courseName}" required="true"/>
+															</sap.ui.layout.form:fields>
+														</sap.ui.layout.form:FormElement>
+														<sap.ui.layout.form:FormElement label="Duración en horas" id="element5_1590106820499">
+															<sap.ui.layout.form:fields>
+																<Input width="100%" id="input5_1590106820499" value="{/hourDuration}" required="true"/>
+															</sap.ui.layout.form:fields>
+														</sap.ui.layout.form:FormElement>
+														<sap.ui.layout.form:FormElement label="Área temática del curso" id="element4">
+															<sap.ui.layout.form:fields>
+																<Input width="100%" id="input4" value="{/courseArea}" required="true"/>
+															</sap.ui.layout.form:fields>
+														</sap.ui.layout.form:FormElement>
+														<sap.ui.layout.form:FormElement label="Nombre del instructor" id="element7">
+															<sap.ui.layout.form:fields>
+																<Input width="100%" id="input7" value="{/instructorName}" required="true"/>
+															</sap.ui.layout.form:fields>
+														</sap.ui.layout.form:FormElement>
+														<sap.ui.layout.form:FormElement label="Nombre del agente capacitador" id="element2_1590106776854">
+															<sap.ui.layout.form:fields>
+																<Input width="100%" id="input2_1590106776853" value="{/agentName}" required="true"/>
+															</sap.ui.layout.form:fields>
+														</sap.ui.layout.form:FormElement>
+														<sap.ui.layout.form:FormElement label="Período de ejecución. Desde" id="element6">
+															<sap.ui.layout.form:fields>
+																<DatePicker xmlns="sap.m" id="picker1" value="{/date}" valueFormat="MM/dd/yy" required="true"/>
+															</sap.ui.layout.form:fields>
+														</sap.ui.layout.form:FormElement>
+														<sap.ui.layout.form:FormElement label="Hasta" id="element3_1590106814379">
+															<sap.ui.layout.form:fields>
+																<DatePicker xmlns:mvc="sap.ui.core.mvc" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns="sap.m" id="picker1_copy" value="{/date2}" valueFormat="MM/dd/yy" required="true"/>
 															</sap.ui.layout.form:fields>
 														</sap.ui.layout.form:FormElement>
 													</sap.ui.layout.form:formElements>
@@ -39,11 +99,15 @@
 												<sap.ui.layout.form:ResponsiveGridLayout id="layout0"/>
 											</sap.ui.layout.form:layout>
 										</sap.ui.layout.form:Form>
-										<Button xmlns="sap.m" text="Login with DocuSign" press="loginWithDocuSign" id="button0_1589944646359"/>
 									</content>
 								</IconTabFilter>
-								<IconTabFilter text="DocuSign" icon="sap-icon://shipping-status" iconColor="Positive" id="filter2">
+								<IconTabFilter text="DocuSign" icon="sap-icon://signature" iconColor="Positive" id="filter2">
 									<content>
+										<VBox xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" width="100%" direction="Column" id="vbox0_copy" justifyContent="Center" alignContent="Inherit" alignItems="Center">
+											<items>
+											<Image xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/1200px-SAP_2011_logo.svg.png" width="110px" height="60px" id="image0_copy"/>
+											</items>
+										</VBox>
 										<HBox width="100%" id="hbox0">
 											<items>
 												<Button xmlns="sap.m" text="Generar forma" id="button0" press="_pressButton"/>
