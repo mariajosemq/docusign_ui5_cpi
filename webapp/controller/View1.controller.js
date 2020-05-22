@@ -29,7 +29,7 @@ sap.ui.define([
 			var templateData = {
 			   "templateData": {
 			      "emailAccount": "mariajose.martinez@sap.com",
-			      "password": "Mex18341341",
+			      "password": "<password>",
 			      "integratorKey": "76617885-1c36-4a5e-98b2-f74cdf5a736b",
 			      "accountId": "10543448",
 			      "templateId": "b4f59517-fc5d-4cd5-9332-1f2c13dc30ca",
@@ -111,7 +111,7 @@ sap.ui.define([
 				if(document.querySelector("#docusign") === null){
 				var html = new sap.ui.core.HTML({
 					    // content: "<iframe width='100%' height='1500px' id='docusign'></iframe>",
-					    content: "<iframe width='1200px' height='1000px' id='docusign'></iframe>",
+					    content: "<iframe width='100%' height='1000px' id='docusign'></iframe>",
 						afterRendering: function () {
 						var div = document.querySelector("#docusign");
 						   div.src = response.url.replace(/.*t=/,'https://demo.docusign.net/Signing/StartInSession.aspx?t='); //ese src es del iframe y el response es el que trae la URL
