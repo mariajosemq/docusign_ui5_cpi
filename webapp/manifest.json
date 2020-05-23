@@ -1,7 +1,7 @@
 {
 	"_version": "1.12.0",
 	"sap.app": {
-		"id": "docusign_ui5.docusign_ui5",
+		"id": "docusign_ui5.docusign_ui5_cpi",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"applicationVersion": {
@@ -14,16 +14,8 @@
 			"version": "1.40.12"
 		},
 		"dataSources": {
-			"docusign": {
-				"uri": "/docusign/elements/api-v2",
-				"type": "JSON"
-			},
-			"docusign_api": {
-				"uri": "docusign_api/restapi/v2",
-				"type": "JSON"
-			},
-			"docusign_api_py": {
-				"uri": "docusign_api_py/envelopes",
+			"docusign_api_cpi_env": {
+				"uri": "docusign_api_cpi/http/docusigndemo/form",
 				"type": "JSON"
 			}
 		}

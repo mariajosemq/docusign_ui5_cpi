@@ -31,28 +31,12 @@
       "description": "SAPUI5 Test Resources"
     },
     {
-      "path": "/docusign",
+      "path": "/docusign_api_cpi",
       "target": {
         "type": "destination",
-        "name": "DOCUSIGN_DEMO"
+        "name": "docusign_api_cpi"
       },
-      "description": "DOCUSIGN_DEMO"
-    },
-    {
-      "path": "/docusign_api_py",
-      "target": {
-        "type": "destination",
-        "name": "docusign_api_py"
-      },
-      "description": "docusign_api_py"
-    },
-      {
-      "path": "/docusign_api",
-      "target": {
-        "type": "destination",
-        "name": "docusign_api"
-      },
-      "description": "docusign_api"
+      "description": "docusign_api_cpi"
     }
   ],
   "sendWelcomeFileRedirect": true
