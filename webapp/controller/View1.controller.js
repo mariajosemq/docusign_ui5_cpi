@@ -30,8 +30,8 @@ sap.ui.define([
 				"templateId": "<templateId>",
 				"emailSubject": "Envio de Docusign",
 				"status": "sent",
-				"emailAccount": "<emailAccount>", //Email account from docusign
-				"password": "<password>", //Password from docusign (I know, it's just a demo!!!)
+				"emailAccount": "<emailAccount>", //Email account for docusign
+				"password": "<password>", //Password for docusign (I know, it's just a demo!!!)
 				"integratorKey": "<integratorKey>",
 				"accountId": "<accountId>",
 				"templateRoles": [{
